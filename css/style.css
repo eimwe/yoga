@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'Geometria Medium';
+  src: local('Geometria Medium'), local('Geometria-Medium'),
+		url(../fonts/Geometria-Medium.woff) format('woff'),
+    url(../fonts/Geometria-Medium.ttf) format('truetype'),
+    url(../fonts/Geometria-Medium.eot) format('embedded-opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria Bold';
+	src: local('Geometria Bold'), local('Geometria-Bold'),
+		url(../fonts/Geometria-Bold.woff) format('woff'),
+		url(../fonts/Geometria-Bold.ttf) format('truetype'),
+		url(../fonts/Geometria-Bold.eot) format('embedded-opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+  font: 14px 'Geometria Medium', Arial, sans-serif;
+  color: #8E80A9;
+}
+
+button, input[type=submit] {
+  font: 14px 'Geometria Medium', Arial, sans-serif;
+  color: #fff;
+}
+
+header {
+  display: flex;
+}
+
+.menu-button {
+  position: relative;
+  width: 26px;
+  height: 2px;
+  background: #8E80A9;
+  margin: 20px 0 0 20px;
+}
+
+.menu-button:before {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #8E80A9;
+}
+
+.menu-button:after {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #8E80A9;
+}
+
+/* .menu-button:before {
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  box-shadow: 0 -8px 0 0 #8E80A9, 0 8px 0 0 #8E80A9;
+} */
