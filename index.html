@@ -8,7 +8,8 @@
 </head>
 <body>
   <header>
-    <nav class="menu-button">
+    <div class="menu-button"></div>
+    <nav class="header-menu">
       <ul>
         <li>Направления</li>
         <li>Абонементы</li>
@@ -17,13 +18,15 @@
         <li>Записаться</li>
       </ul>
     </nav>
-    <span class="phone-number">8(812)690-10-10</span>
+    <span class="phone">
+      <a href="tel:+78126901010" title="Свяжитесь с нами по номеру 8 (812) 690-10-10">8 (812) 690-10-10</a>
+    </span>
   </header>
   <main>
     <section class="banner">
       <h1>Yoga</h1>
       <p>Почувствуй расслабление в своем теле</p>
-      <a class="subscription-form-pointer" href="#" title="Записаться на пробное занятие бесплатно">
+      <a class="go-to-btn" href="#" title="Записаться на пробное занятие бесплатно">
         <span>&gt;</span>
         <span>Запишитесь на бесплатное пробное занятие</span>
       </a>
@@ -37,175 +40,241 @@
       </div>
     </section>
     <section class="clubs">
-      <h2>Направление</h2>
+      <h2>Направления</h2>
       <div class="clubs-wrapper">
         <article class="club">
-          <div class="club-image-wrapper">
-            <img src="" alt="">
+          <div class="image-wrapper">
+            <img src="" alt="Фото с занятий по Хатха-йоге">
           </div>
           <div class="club-desc">
-            <h3 class="club-name"></h3>
-            <p class="club-schedule"></p>
-            <p class="club-coach">Инструктор</p>
+            <h3 class="club-name">Хатха-йога</h3>
+            <p class="club-schedule">
+              Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00
+            </p>
+            <p class="club-coach">Инструктор Емельянова Полина</p>
           </div>
-          <a href="#" class="club-details">&gt;</a>
+          <a href="#" class="go-to-btn details-btn">&gt;</a>
         </article>
         <article class="club">
-          <div class="club-image-wrapper">
-            <img src="" alt="">
+          <div class="image-wrapper">
+            <img src="" alt="Фото с занятий по Ашатанга-йоге">
           </div>
           <div class="club-desc">
-            <h3 class="club-name"></h3>
-            <p class="club-schedule"></p>
-            <p class="club-coach">Инструктор</p>
+            <h3 class="club-name">Ашатанга-йога</h3>
+            <p class="club-schedule">
+              Пн, Ср, Пт – с 11:00 до 14:00 Вт, Чт – с 19:00 до 21:00
+            </p>
+            <p class="club-coach">Инструктор Емельянова Полина</p>
           </div>
-          <a href="#" class="club-details">&gt;</a>
+          <a href="#" class="go-to-btn details-btn">&gt;</a>
         </article>
         <article class="club">
-          <div class="club-image-wrapper">
-            <img src="" alt="">
+          <div class="image-wrapper">
+            <img src="" alt="Фото с занятий по Кундалини-йоге">
           </div>
           <div class="club-desc">
-            <h3 class="club-name"></h3>
-            <p class="club-schedule"></p>
-            <p class="club-coach">Инструктор</p>
+            <h3 class="club-name">Кундалини-йога</h3>
+            <p class="club-schedule">
+              Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00
+            </p>
+            <p class="club-coach">Инструктор Емельянова Полина</p>
           </div>
-          <a href="#" class="club-details">&gt;</a>
+          <a href="#" class="go-to-btn details-btn">&gt;</a>
         </article>
         <button class="clubs-loader">Смотреть больше</button>
       </div>
     </section>
-    <section class="membership-cards">
+    <section class="member-cards">
       <h2>Абонементы</h2>
-      <div class="membership-cards-toggle">
+      <div class="member-cards-toggle">
         <ul>
           <li class="active">1 месяц</li>
           <li>6 месяцев</li>
           <li>12 месяцев</li>
         </ul>
       </div>
-      <article class="membership-card">
-        
+      <article class="member-card">
+        <h3 class="member-card-name">Утро</h3>
+        <p class="member-card-schedule">Посещение с 11:00 до 16:00</p>
+        <span class="member-card-price">1300 р</span>
+        <button class="member-card-order">Заказать абонемент</button>
+      </article>
+      <article class="member-card">
+        <h3 class="member-card-name">Безлимит</h3>
+        <p class="member-card-schedule">Посещение не ограничено по времени</p>
+        <span class="member-card-price">2800 р</span>
+        <button class="member-card-order">Заказать абонемент</button>
+      </article>
+      <article class="member-card">
+        <h3 class="member-card-name">Вечер</h3>
+        <p class="member-card-schedule">Посещение с 17:00 до 21:00</p>
+        <span class="member-card-price">2000 р</span>
+        <button class="member-card-order">Заказать абонемент</button>
       </article>
     </section>
-    
-
-
-
-  </main>
-  
-  <article class="season-pass">
-    <h3>Абонементы</h3>
-    <ul class="season-pass__selection">
-      <li class="season-pass__option">1 месяц</li>
-      <li class="season-pass__option">6 месяцев</li>
-      <li class="season-pass__option">12 месцев</li>
-    </ul>
-    <section clas="season-pass__item">
-      <h3 class="season-pass__content-title"></h3>
-      <p class="season-pass__content-schedule"></p>
-      <p class="season-pass__content-price"></p>
-      <button class="season-pass__order">Заказать абонемент</button>
+    <section class="coaches">
+      <h2>Наша команда</h2>
+      <div class="coaches-slider-wrapper">
+        <button class="go-to-btn details-btn prev-slide">&lt;</button>
+        <div class="slider-counter">
+          <span class="current-slide"></span>
+          <span class="remaining-slide"></span>
+        </div>
+        <button class="go-to-btn details-btn next-slide">&gt;</button>
+        <div class="coaches-slider">
+          <article class="coaches-slide">
+            <header class="coaches-desc">
+              <div class="image-wrapper">
+                <img src="" alt="Фото инструктора Серёжи Попова">
+              </div>
+              <h3 class="club-name">Хатха-йога</h3>
+              <p class="club-coach">Инструктор Серёжа Попов</p>
+              <ul class="social-buttons-wrapper">
+                <li><a href="#" class="social-button">ВКонтакте</a></li>
+                <li><a href="#" class="social-button">Twitter</a></li>
+              </ul>
+              <a href="#" class="coaches-bio-loader">Смотреть</a>
+            </header>
+            <footer class="coaches-bio">
+              <h4 class="coaches-name">Серёжа Попов</h4>
+              <p class="coaches-exp">Опыт преподавания: 8 лет/p>
+              <div class="coaches-skills">
+                <p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p>
+                <p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.</p>
+                <p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).</p>
+                <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
+              </div>
+            </footer>
+          </article>
+          <article class="coaches-slide">
+            <header class="coaches-desc">
+              <div class="image-wrapper">
+                <img src="" alt="Фото инструктора Серёжи Попова">
+              </div>
+              <h3 class="club-name">Флоу-йога</h3>
+              <p class="club-coach">Инструктор Серёжа Попов</p>
+              <ul class="social-buttons-wrapper">
+                <li><a href="#" class="social-button">ВКонтакте</a></li>
+                <li><a href="#" class="social-button">Twitter</a></li>
+              </ul>
+              <a href="#" class="coaches-bio-loader">Смотреть</a>
+            </header>
+            <footer class="coaches-bio">
+              <h4 class="coaches-name">Серёжа Попов</h4>
+              <p class="coaches-exp">Опыт преподавания: 8 лет/p>
+              <div class="coaches-skills">
+                <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
+              </div>
+            </footer>
+          </article>
+          <article class="coaches-slide">
+            <header class="coaches-desc">
+              <div class="image-wrapper">
+                <img src="" alt="Фото инструктора Серёжи Попова">
+              </div>
+              <h3 class="club-name">Йога в гамаках</h3>
+              <p class="club-coach">Инструктор Серёжа Попов</p>
+              <ul class="social-buttons-wrapper">
+                <li><a href="#" class="social-button">ВКонтакте</a></li>
+                <li><a href="#" class="social-button">Twitter</a></li>
+              </ul>
+              <a href="#" class="coaches-bio-loader">Смотреть</a>
+            </header>
+            <footer class="coaches-bio">
+              <h4 class="coaches-name">Серёжа Попов</h4>
+              <p class="coaches-exp">Опыт преподавания: 8 лет/p>
+              <div class="coaches-skills">
+                <p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).</p>
+                <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
     </section>
-    <section clas="season-pass__item">
-      <h3 class="season-pass__content-title"></h3>
-      <p class="season-pass__content-schedule"></p>
-      <p class="season-pass__content-price"></p>
-      <button class="season-pass__order">Заказать абонемент</button>
-    </section>
-    <section clas="season-pass__item">
-      <h3 class="season-pass__content-title"></h3>
-      <p class="season-pass__content-schedule"></p>
-      <p class="season-pass__content-price"></p>
-      <button class="season-pass__order">Заказать абонемент</button>
-    </section>
-  </article>
-  <article class="team">
-    <h3>Наша команда</h3>
-    <div class="team__slider">
-      <section class="team__slider-item">
-        <header class="team__slider-header">
-          <figure></figure>
-          <figcaption>
-            <div class="team__slider-header-bio">
-              <p class="sport__content-coach">Инструктор Сережа Попов</p>
-              <span class="sport__content-type">Хатха-йога</span>
-            </div>
-            <ul class="team__slider-header-social">
-              <li class="team__slider-header-social-icon"></li>
-              <li class="team__slider-header-social-icon"></li>
-            </ul>
-          </figcaption>
-        </header>
-        <footer class="team__slider-footer">
-          <div class="team__slider-footer-title"><span>Опыт преподавания: 8 лет</span></div>
-          <div class="team__slider-footer-content">
-            <p>Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p>
-            <p>Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.</p>
-            <p>Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).</p>
-            <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
-          </div>
-        </footer>
-      </section>
-    </div>
-    <button class="view-prev-slide"></button>
-    <button class="view-next-slide"></button>
-  </article>
-  <article class="feedback">
-    <h3>Отзывы</h3>
-      <section class="feedback__slider-item">
-        <header class="feedback__slider-header">
-          <span></span>
-          <div class="feedback__slider-footer-content">
+    <section class="feedback">
+      <h2>Отзывы</h2>
+      <div class="feedback-slider-wrapper">
+        <button class="go-to-btn details-btn prev-slide">&lt;</button>
+        <div class="slider-counter">
+          <span class="current-slide"></span>
+          <span class="remaining-slide"></span>
+        </div>
+        <button class="go-to-btn details-btn next-slide">&gt;</button>
+        <div class="feedback-slider">
+          <article class="feedback-slide">
+            <blockquote>
               <p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p>
               <p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>
-          </div>
-        </header>
-        <footer class="feedback__slider-footer">
-          <figure></figure>
-          <figcaption>
-            <div class="feedback__slider-footer-bio">
-              <p class="feedback__slider-footer-name">Сережа Попов</p>
-              <span class="feedback__slider-footer-date">16 мая 2018</span>
-              <ul class="team__slider-header-social">
-                <li class="team__slider-header-social-icon"></li>
-                <li class="team__slider-header-social-icon"></li>
+            </blockquote>
+            <div class="feedback-author">
+              <div class="image-wrapper">
+                <img src="" alt="Фото автора отзыва">
+              </div>
+              <p class="club-coach">Серёжа Попов</p>
+              <time datetime="2018-05-16">16 мая 2018</time>
+              <ul class="social-buttons-wrapper">
+                <li><a href="#" class="social-button">ВКонтакте</a></li>
+                <li><a href="#" class="social-button">Twitter</a></li>
               </ul>
             </div>
-          </figcaption>
-        </footer>
-      </section>
-      <button class="view-prev-slide"></button>
-      <button class="view-next-slide"></button>
-      <div class="slide-counter">1/9</div>
-  </article>
-  <article class="motivator">
-    <h3>Запишитесь на бесплатное пробное занятие</h3>
-    <form method="POST" action="#">
-      <input type="text" placeholder="Ваше имя">
-      <input type="text" placeholder="Ваш телефон">
-      <input type="submit" value="Оставить заявку">
-    </form>
-  </article>
+          </article>
+          <article class="feedback-slide">
+            <blockquote>
+              <p>Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И после занятий наступает спокойствие!</p>
+              <p>Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Марине.</p>
+            </blockquote>
+            <div class="feedback-author">
+              <div class="image-wrapper">
+                <img src="" alt="Фото автора отзыва">
+              </div>
+              <p class="club-coach">Серёжа Попов</p>
+              <time datetime="2019-06-24">24 июня 2019</time>
+              <ul class="social-buttons-wrapper">
+                <li><a href="#" class="social-button">ВКонтакте</a></li>
+                <li><a href="#" class="social-button">Twitter</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="subscription-form">
+      <h2>Запишитесь на бесплатное пробное занятие</h2>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Ваше имя">
+        <input type="tel" placeholder="Ваш телефон">
+        <input type="submit" value="Оставить заявку">
+      </form>
+    </section>
+  </main>
   <footer>
-    <div class="footer__contacts_item">
-      <p>Адрес: Московский проспект, 22</p>
-      <p>График работы: Пн-Вс с 11:00 до 21:00</p>
+    <div class="footer-contacts">
+      <h5>Адрес:</h5>
+      <p>Московский проспект, 22</p>
     </div>
-    <div class="footer__contacts_item">
-      <p>Телефон: 8 (812) 690-10-10</p>
-      <p>Email: yogaspb@gmail.com</p>
+    <div class="footer-contacts">
+      <h5>График работы:</h5>
+      <p>Пн-Вс с 11:00 до 21:00</p>
     </div>
-    <div class="footer__contacts_social">
-      <ul class="team__slider-header-social">
-        <li class="team__slider-header-social-icon"></li>
-        <li class="team__slider-header-social-icon"></li>
-        <li class="team__slider-header-social-icon"></li>
+    <div class="footer-contacts">
+      <h5>Телефон:</h5>
+      <a href="tel:+78126901010" title="Свяжитесь с нами по номеру 8 (812) 690-10-10">8 (812) 690-10-10</a>
+    </div>
+    <div class="footer-contacts">
+      <h5>Email:</h5>
+      <a href="mailto:yogaspb@gmail.com">yogaspb@gmail.com</a>
+    </div>
+    <div class="banner-bottom-wrapper">
+      <ul class="social-buttons-wrapper">
+        <li><a href="#" class="social-button">ВКонтакте</a></li>
+        <li><a href="#" class="social-button">Twitter</a></li>
+        <li><a href="#" class="social-button">Facebook</a></li>
       </ul>
     </div>
-    <div class="footer__contacts_copyright">
+    <div class="footer-copyright">
       <p>© 2018 Все права защищены</p>
-      <p>Yogaspb.com</p>
+      <a href="#" title="Перейти на сайт Yogaspb.com">Yogaspb.com</a>
     </div>
   </footer>
 </body>   
