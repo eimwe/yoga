@@ -29,11 +29,13 @@
 body {
   font: 12px/15px 'Geometria Medium', Arial, sans-serif;
   color: #8e80a9;
+  background-color: #fcf8fe;
 }
 
 header {
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -126,7 +128,7 @@ header {
 
 .banner h1 {
   order: 2;
-  margin: 25px 0;
+  margin: 10px 0 25px;
   text-transform: uppercase;
   text-shadow: 0px 4px 50px rgba(131, 115, 161, 0.6);
   color: #fff;
@@ -143,14 +145,35 @@ header {
   font: 18px 'Caveat-Regular', 'Segoe Script', serif;
 }
 
-.go-to-btn {
+.go-to-btn-wrapper {
+  width: 175px;
+  display: flex;
+  align-items: center;
+  align-self: center;
   order: 3;
+  text-align: left;
+  color: #e65c7b;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.go-to-btn {
+  flex: 1 0 auto;
+  width: 30px;
+  height: 26px;
+  margin-right: 7px;
+  text-align: center;
+  background-color: #e65c7b;
+  line-height: 30px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .banner-bottom-wrapper {
   display: flex;
   justify-content: space-around;
   order: 4;
+  visibility: hidden;
 }
 
 .social-buttons-wrapper {
@@ -183,4 +206,97 @@ header {
 
 .social-buttons-wrapper li:last-child .social-button {
   background-image: url(../img/assets/fb.svg);
+}
+
+.clubs {
+  position: relative;
+  margin-top: -50px;
+  text-align: center;
+}
+
+.clubs::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  top: 150px;
+  left: -20px;
+  z-index: -1;
+  background: url('../img/assets/clubs-bg.png') no-repeat 0 0;
+  background-size: cover;
+  transform: rotate(-180deg);
+}
+
+.clubs h2 {
+  margin: 0 0 40px 0;
+  font: 18px 'Geometria Bold';
+}
+
+.clubs-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.image-wrapper {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.club {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+}
+
+.club-desc-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 115px;
+  background-color: #fff;
+}
+
+.club-desc {
+  width: 207px;
+  padding: 20px 45px 20px 20px;
+  font-size: 10px;
+  text-align: left;
+}
+
+.club-desc .club-name {
+  margin: 0 0 10px 0;
+  font: 12px 'Geometria Bold';
+  line-height: 5px;
+}
+
+.club-desc .club-schedule {
+  margin: 0 0 5px 0;
+}
+
+.club-desc .club-coach {
+  margin: 0;
+  color: #e65c7b;
+}
+
+.club-desc-wrapper .go-to-btn {
+  width: 43px;
+  height: auto;
+  margin: 0;
+  line-height: 115px;
+  background-color: #8e80a9;
+}
+
+.clubs-loader {
+  display: none;
+  height: 30px;
+  padding: 0;
+  border: none;
+  line-height: 30px;
+  font-size: 10px;
+  color: inherit;
+  background-color: #fff;
+  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
 }

@@ -26,10 +26,14 @@
     <section class="banner">
       <h1>Yoga</h1>
       <p>Почувствуй расслабление в своем теле</p>
-      <a class="go-to-btn" href="#" title="Записаться на пробное занятие бесплатно">
-        <span>&gt;</span>
-        <span>Запишитесь на бесплатное пробное занятие</span>
-      </a>
+      <div class="go-to-btn-wrapper">
+        <a class="go-to-btn" href="#" title="Записаться на пробное занятие бесплатно">
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L1 9" stroke="white"/>
+          </svg>
+        </a>
+        <span class="go-to-btn-desc">Запишитесь на бесплатное пробное занятие</span>
+      </div>
       <div class="banner-bottom-wrapper">
         <ul class="social-buttons-wrapper">
           <li><a href="#" class="social-button">ВКонтакте</a></li>
@@ -39,52 +43,70 @@
         <span class="current-city">Санкт-Петербург</span>
       </div>
     </section>
-    <!--
     <section class="clubs">
       <h2>Направления</h2>
       <div class="clubs-wrapper">
         <article class="club">
           <div class="image-wrapper">
-            <img src="" alt="Фото с занятий по Хатха-йоге">
+            <img src="../yoga/img/hatha-yoga.png" width="250" height="200" alt="Фото с занятий по Хатха-йоге">
           </div>
-          <div class="club-desc">
-            <h3 class="club-name">Хатха-йога</h3>
-            <p class="club-schedule">
-              Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00
-            </p>
-            <p class="club-coach">Инструктор Емельянова Полина</p>
+          <div class="club-desc-wrapper">
+            <div class="club-desc">
+              <h3 class="club-name">Хатха-йога</h3>
+              <p class="club-schedule">
+                Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00
+              </p>
+              <p class="club-coach">Инструктор<br> Емельянова Полина</p>
+            </div>
+            <a class="go-to-btn" href="#" title="Записаться на Хатха-йогу">
+              <svg width="8" height="12" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L1 9" stroke="white"/>
+              </svg>
+            </a>
           </div>
-          <a href="#" class="go-to-btn details-btn">&gt;</a>
         </article>
         <article class="club">
           <div class="image-wrapper">
-            <img src="" alt="Фото с занятий по Ашатанга-йоге">
+            <img src="../yoga/img/ashatanga-yoga.png" width="250" height="200" alt="Фото с занятий по Ашатанга-йоге">
           </div>
-          <div class="club-desc">
-            <h3 class="club-name">Ашатанга-йога</h3>
-            <p class="club-schedule">
-              Пн, Ср, Пт – с 11:00 до 14:00 Вт, Чт – с 19:00 до 21:00
-            </p>
-            <p class="club-coach">Инструктор Емельянова Полина</p>
+          <div class="club-desc-wrapper">
+            <div class="club-desc">
+              <h3 class="club-name">Ашатанга-йога</h3>
+              <p class="club-schedule">
+                Пн, Ср, Пт – с 11:00 до 14:00 Вт, Чт – с 19:00 до 21:00
+              </p>
+              <p class="club-coach">Инструктор<br> Емельянова Полина</p>
+            </div>
+            <a class="go-to-btn" href="#" title="Записаться на Ашатанга-йогу">
+              <svg width="7" height="11" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L1 9" stroke="white"/>
+              </svg>
+            </a>
           </div>
-          <a href="#" class="go-to-btn details-btn">&gt;</a>
         </article>
         <article class="club">
           <div class="image-wrapper">
-            <img src="" alt="Фото с занятий по Кундалини-йоге">
+            <img src="../yoga/img/kundalini-yoga.png" width="250" height="200" alt="Фото с занятий по Кундалини-йоге">
           </div>
-          <div class="club-desc">
-            <h3 class="club-name">Кундалини-йога</h3>
-            <p class="club-schedule">
-              Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00
-            </p>
-            <p class="club-coach">Инструктор Емельянова Полина</p>
+          <div class="club-desc-wrapper">
+            <div class="club-desc">
+              <h3 class="club-name">Кундалини-йога</h3>
+              <p class="club-schedule">
+                Пн, Ср, Пт – с 12:00 до 15:00 Вт, Чт – с 18:00 до 21:00
+              </p>
+              <p class="club-coach">Инструктор<br> Емельянова Полина</p>
+            </div>
+            <a class="go-to-btn" href="#" title="Записаться на Кундалини-йогу">
+              <svg width="7" height="11" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L1 9" stroke="white"/>
+              </svg>
+            </a>
           </div>
-          <a href="#" class="go-to-btn details-btn">&gt;</a>
         </article>
         <button class="clubs-loader">Смотреть больше</button>
       </div>
     </section>
+    <!--
     <section class="member-cards">
       <h2>Абонементы</h2>
       <div class="member-cards-toggle">
