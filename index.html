@@ -47,7 +47,7 @@
       <h2>Направления</h2>
       <div class="clubs-wrapper">
         <article class="club">
-          <div class="image-wrapper">
+          <div class="clubs-image-wrapper">
             <img src="../yoga/img/hatha-yoga.png" width="250" height="200" alt="Фото с занятий по Хатха-йоге">
           </div>
           <div class="club-desc-wrapper">
@@ -66,7 +66,7 @@
           </div>
         </article>
         <article class="club">
-          <div class="image-wrapper">
+          <div class="clubs-image-wrapper">
             <img src="../yoga/img/ashatanga-yoga.png" width="250" height="200" alt="Фото с занятий по Ашатанга-йоге">
           </div>
           <div class="club-desc-wrapper">
@@ -85,7 +85,7 @@
           </div>
         </article>
         <article class="club">
-          <div class="image-wrapper">
+          <div class="clubs-image-wrapper">
             <img src="../yoga/img/kundalini-yoga.png" width="250" height="200" alt="Фото с занятий по Кундалини-йоге">
           </div>
           <div class="club-desc-wrapper">
@@ -134,21 +134,30 @@
         </article>
       </div>
     </section>
-    <!--
     <section class="coaches">
       <h2>Наша команда</h2>
       <div class="coaches-slider-wrapper">
-        <button class="go-to-btn details-btn prev-slide">&lt;</button>
-        <div class="slider-counter">
-          <span class="current-slide"></span>
-          <span class="remaining-slide"></span>
-        </div>
-        <button class="go-to-btn details-btn next-slide">&gt;</button>
         <div class="coaches-slider">
-          <article class="coaches-slide">
-            <header class="coaches-desc">
+          <div class="coaches-slider-controls">
+            <button class="go-to-btn prev-slide">
+              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L1 9"/>
+              </svg>
+            </button>
+            <div class="slider-counter">
+              <span class="current-slide"></span>
+              <span class="remaining-slide"></span>
+            </div>
+            <button class="go-to-btn next-slide">
+              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L1 9"/>
+              </svg>
+            </button>
+          </div>
+          <div class="coaches-slide">
+            <article class="coaches-desc">
               <div class="image-wrapper">
-                <img src="" alt="Фото инструктора Серёжи Попова">
+                <img src="" alt="Фото инструктора Серёжи Попова" width="82" height="82">
               </div>
               <h3 class="club-name">Хатха-йога</h3>
               <p class="club-coach">Инструктор Серёжа Попов</p>
@@ -157,22 +166,10 @@
                 <li><a href="#" class="social-button">Twitter</a></li>
               </ul>
               <a href="#" class="coaches-bio-loader">Смотреть</a>
-            </header>
-            <footer class="coaches-bio">
-              <h4 class="coaches-name">Серёжа Попов</h4>
-              <p class="coaches-exp">Опыт преподавания: 8 лет/p>
-              <div class="coaches-skills">
-                <p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p>
-                <p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.</p>
-                <p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).</p>
-                <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
-              </div>
-            </footer>
-          </article>
-          <article class="coaches-slide">
-            <header class="coaches-desc">
+            </article>
+            <article class="coaches-desc">
               <div class="image-wrapper">
-                <img src="" alt="Фото инструктора Серёжи Попова">
+                <img src="" alt="Фото инструктора Серёжи Попова" width="82" height="82">
               </div>
               <h3 class="club-name">Флоу-йога</h3>
               <p class="club-coach">Инструктор Серёжа Попов</p>
@@ -181,19 +178,10 @@
                 <li><a href="#" class="social-button">Twitter</a></li>
               </ul>
               <a href="#" class="coaches-bio-loader">Смотреть</a>
-            </header>
-            <footer class="coaches-bio">
-              <h4 class="coaches-name">Серёжа Попов</h4>
-              <p class="coaches-exp">Опыт преподавания: 8 лет/p>
-              <div class="coaches-skills">
-                <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
-              </div>
-            </footer>
-          </article>
-          <article class="coaches-slide">
-            <header class="coaches-desc">
+            </article>
+            <article class="coaches-desc">
               <div class="image-wrapper">
-                <img src="" alt="Фото инструктора Серёжи Попова">
+                <img src="" alt="Фото инструктора Серёжи Попова" width="82" height="82">
               </div>
               <h3 class="club-name">Йога в гамаках</h3>
               <p class="club-coach">Инструктор Серёжа Попов</p>
@@ -202,19 +190,39 @@
                 <li><a href="#" class="social-button">Twitter</a></li>
               </ul>
               <a href="#" class="coaches-bio-loader">Смотреть</a>
-            </header>
-            <footer class="coaches-bio">
+            </article>
+          </div>
+          <div class="coaches-bio-slide">
+            <article class="coaches-bio">
               <h4 class="coaches-name">Серёжа Попов</h4>
-              <p class="coaches-exp">Опыт преподавания: 8 лет/p>
+              <p class="coaches-exp">Опыт преподавания: 8 лет</p>
+              <div class="coaches-skills">
+                <p>Образование и опыт работы: Практикует с 2011 года, является сертифицированным инструктором по флоу- йоге. Большой опыт преподавания йоги для начинающих и продолжающих.</p>
+                <p>Обучалась в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.</p>
+                <p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).</p>
+                <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
+              </div>
+            </article>
+            <article class="coaches-bio">
+              <h4 class="coaches-name">Серёжа Попов</h4>
+              <p class="coaches-exp">Опыт преподавания: 8 лет</p>
+              <div class="coaches-skills">
+                <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
+              </div>
+            </article>
+            <article class="coaches-bio">
+              <h4 class="coaches-name">Серёжа Попов</h4>
+              <p class="coaches-exp">Опыт преподавания: 8 лет</p>
               <div class="coaches-skills">
                 <p> Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).</p>
                 <p>Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и здоровому питанию.</p>
               </div>
-            </footer>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
+    <!--
     <section class="feedback">
       <h2>Отзывы</h2>
       <div class="feedback-slider-wrapper">

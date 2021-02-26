@@ -243,7 +243,7 @@ header {
   margin: 0 auto;
 }
 
-.image-wrapper {
+.clubs-image-wrapper {
   width: 250px;
   height: 200px;
   overflow: hidden;
@@ -395,4 +395,66 @@ header {
   font-size: 10px;
   color: #fff;
   background-color: #8e80a9;
+}
+
+.coaches {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.coaches h2 {
+  margin: 0 0 40px 0;
+  font: 18px 'Geometria Bold';
+}
+
+.coaches-slider {
+  position: relative;
+  width: 290px;
+  margin: 0 auto;
+}
+
+.coaches-slider-controls button {
+  width: 16px;
+  height: 31px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #8e80a9;
+  background-color: transparent;
+}
+
+.coaches-slider-controls button:hover,
+.coaches-slider-controls button:focus {
+  background-color: #8e80a9;
+}
+
+.coaches-slider-controls button svg {
+  display: block;
+  margin: 0 auto;
+  stroke: #8e80a9;
+}
+
+.coaches-slider-controls button:hover > svg,
+.coaches-slider-controls button:focus > svg {
+  stroke: #fff;
+}
+
+.coaches-slider-controls .prev-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.coaches-slider-controls .next-slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.coaches-slider-controls .slider-counter {
+  display: none;
+}
+
+.coaches-desc:not(:first-child), .coaches-bio:not(:first-child) {
+  display: none;
 }
