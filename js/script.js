@@ -17,8 +17,8 @@ window.document.addEventListener('DOMContentLoaded', function() {
         activeLiNode = document.getElementsByClassName('toggle-active');
     for (let cnt = 0; cnt < liNodes.length; cnt++) {
       liNodes[cnt].addEventListener('click', function() {
-        activeLiNode[0].classList.remove("toggle-active");
-        liNodes[cnt].classList.toggle("toggle-active");
+        activeLiNode[0].classList.remove('toggle-active');
+        liNodes[cnt].classList.toggle('toggle-active');
       });
     }
   })();

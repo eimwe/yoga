@@ -26,6 +26,14 @@
 	font-style: normal;
 }
 
+@font-face {
+  font-family: 'Francois One';
+	src: local('FrancoisOne-Regular'), local('FrancoisOne-Regular'),
+		url(../fonts/FrancoisOne-Regular.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
 body {
   font: 12px/15px 'Geometria Medium', Arial, sans-serif;
   color: #8e80a9;
@@ -455,7 +463,7 @@ header {
 }
 
 .coaches-slider-controls .slider-counter {
-  /*display: none;*/
+  display: none;
   width: 30px;
   position: absolute;
   bottom: 0;
@@ -598,4 +606,50 @@ header {
 
 .slide-inactive {
   visibility: hidden;
+}
+
+.feedback {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.feedback h2 {
+  margin: 0 0 40px 0;
+  font: 18px 'Geometria Bold';
+}
+
+.feedback-slider {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.feedback-slide {
+  box-sizing: border-box;
+  width: 250px;
+  height: 270px;
+  padding: 15px;
+  margin:0 auto;
+  font-size: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 25px rgba(142, 128, 169, .2);
+}
+
+.feedback-slide blockquote {
+  position: relative;
+  margin: 45px 0 0 0;
+  text-align: left;
+}
+
+.feedback-slide blockquote::before {
+  position: absolute;
+  top: -20px;
+  left: -3px;
+  content: "“";
+  font: 80px 'Francois One';
+  line-height: 15px;
+  color: rgba(142, 128, 169, 0.39);
+}
+
+.feedback-slide blockquote p {
+  margin-bottom: 20px;
 }
