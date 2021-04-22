@@ -153,6 +153,9 @@ window.document.addEventListener('DOMContentLoaded', function() {
   //4.1 Slider counter initializer
   currentSlide.appendChild(initialSlideIndex);
   nextSlide.appendChild(lastSlideIndex);
+  for(let itr = 0; itr < slides.length; itr++) {
+    slides[itr].setAttribute('style', 'order: ' + itr + ';');
+  }
 
   //4.2 Code for moving slideshow forward including incrementor for slider counter
   function showNextFeedback(index) {
@@ -167,7 +170,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
       currentSlide.appendChild(initialSlideIndex);
     }
 
-    slides[count].setAttribute('style', 'order: ' + (count + 1) + ';');
+    slides[count].setAttribute('style', 'order: ' + (count + slideCount) + ';');
 
     if(count < slideCount - 1) {
       count++;
@@ -191,7 +194,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
       currentSlide.appendChild(initialSlideIndex);
     }
 
-    slides[count].setAttribute('style', 'order: ' + count + ';');
+    slides[count].setAttribute('style', 'order: ' + (slideCount - count) + ';');
   
     if(count > 0) {
       count--;
@@ -199,7 +202,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
       count = slideCount - 1;
     }
   
-    slides[count].setAttribute('style', 'order: ' + (count - slideCount) + ';');
+    slides[count].setAttribute('style', 'order: 0;');
   }
 
   //4.4 Event listener for slider buttons
