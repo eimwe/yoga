@@ -134,7 +134,7 @@ header {
   justify-content: center;
   height: 335px;
   text-align: center;
-  background: url('../img/assets/banner-bg.png') no-repeat -105px 0;
+  background: url(../img/assets/banner-bg.png) no-repeat -105px 0;
   background-size: cover;
 }
 
@@ -234,7 +234,7 @@ header {
   top: 150px;
   left: -30px;
   z-index: -1;
-  background: url('../img/assets/clubs-bg.png') no-repeat 0 0;
+  background: url(../img/assets/clubs-bg.png) no-repeat 0 0;
   background-size: cover;
   transform: rotate(-180deg);
 }
@@ -747,4 +747,112 @@ header {
 
 .feedback-info .social-buttons-wrapper {
   margin-top: 9px;
+}
+
+.subscription-form {
+  box-sizing: border-box;
+  min-height: 390px;
+  margin-top: 70px;
+  padding: 70px 35px;
+  background: url(../img/assets/form-bg.png) no-repeat 24% 0;
+  background-size: cover;
+}
+
+.subscription-form h2 {
+  margin: 0;
+  font: 20px/27px 'Geometria Bold';
+}
+
+.subscription-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-form form input {
+  border: none;
+  background-color: transparent;
+  font: 14px 'Geometria Medium';
+}
+
+.subscription-form input[type = "text"],
+.subscription-form input[type = "tel"] {
+  margin-top: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #8e80a9;
+}
+
+.subscription-form input[type = "text"]::placeholder,
+.subscription-form input[type = "tel"]::placeholder {
+  color: #c8c0db;
+}
+
+.subscription-form input[type = "submit"] {
+  margin-top: 35px;
+  padding: 20px 0;
+  background-color: #e65c7b;
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 35px;
+  background-color: #8373a1;
+  color: #fff;
+}
+
+.footer-contacts-wrapper p {
+  margin: 0 0 22px 0;
+  line-height: 20px;
+}
+
+.footer-address-title {
+  display: block;
+  font-size: 14px;
+}
+
+.footer-address-desc {
+  display: block;
+}
+
+.footer-contacts-wrapper a[href^="tel"] {
+  font-size: 14px;
+}
+
+.footer-contacts-wrapper a,
+.footer-copyright a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-contacts-wrapper .social-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-wrapper .social {
+  box-sizing: border-box;
+  display: block;
+  width: 35px;
+  height: 20px;
+  text-align: center;
+}
+
+.footer-contacts-wrapper .social svg > path {
+  fill: #fff;
+  fill-opacity: 1;
+}
+
+.footer-copyright {
+  margin-top: 40px;
+  opacity: .5;
+}
+
+.footer-copyright a {
+  margin-top: 25px;
 }
