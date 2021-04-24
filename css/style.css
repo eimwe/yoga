@@ -55,25 +55,65 @@ header {
   height: 40px;
 }
 
-.menu-button {
-  position: relative;
-  width: 30px;
-  height: 1px;
-  margin-top: -10px;
-  margin-left: 15px;
-  background-color: #8e80a9;
-  box-shadow: 0 5px 0 0 #8e80a9;
+.header-fixed {
+  background-color: #fff;
+  box-shadow: 0 4px 2px -2px #8e80a9;
 }
 
-.menu-button::after {
-  content: "";
+#menu-toggle {
+  display: none;
+}
+
+.menu-button label {
+  position: relative;
   display: block;
+  width: 30px;
+  height: 1px;
+  margin-left: 15px;
+  background-color: #8e80a9;
+  cursor: pointer;
+}
+
+.menu-button label::before,
+.menu-button label::after {
   position: absolute;
-  top: 10px;
   left: 0;
-  width: 20px;
+  content: '';
+  width: 30px;
   height: 1px;
   background-color: #8e80a9;
+  transition: all 300ms cubic-bezier(1, 0, 0, 1);
+}
+
+.menu-button label::before {
+  bottom: 5px;
+  transform-origin: left top;
+  transform: rotateZ(0deg);
+}
+
+.menu-button label::after {
+  top: 5px;
+  width: 20px;
+  transform-origin: left bottom;
+  transform: rotateZ(0deg);
+}
+
+#menu-toggle:checked ~ label {
+  background-color: transparent;
+}
+
+#menu-toggle ~ label {
+  transition: all 200ms cubic-bezier(1, 0, 0, 1);
+}
+
+#menu-toggle:checked ~ label::before {
+  width: 15px;
+  transform: rotateZ(45deg);
+}
+
+#menu-toggle:checked ~ label::after {
+  width: 15px;
+  transform: rotateZ(-45deg);
 }
 
 .header-menu {
@@ -85,30 +125,6 @@ header {
   height: 50vh;
   border: 1px solid #8e80a9;
   background-color: #fff;
-  animation: menuOpen 1s;
-}
-
-.header-fixed {
-  background-color: #fff;
-  box-shadow: 0 4px 2px -2px #8e80a9;
-}
-
-@keyframes menuOpen {
-  from {
-    left: -200px;
-  }
-  to {
-    left: 30px;
-  }
-}
-
-@keyframes menuClose {
-  from {
-    left: 30px;
-  }
-  to {
-    left: -200px;
-  }
 }
 
 .header-menu ul {
@@ -121,6 +137,34 @@ header {
   padding: 0;
   list-style-type: none;
 }
+
+@keyframes menuOpen {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 30px;
+  }
+}
+
+/* @keyframes menuClose {
+  from {
+    left: 30px;
+  }
+  to {
+    left: -200px;
+    display: none;
+  }
+} */
+
+.menu-opened {
+  display: block;
+  animation: menuOpen 1s;
+}
+
+/* .menu-closed {
+  display: none;
+} */
 
 .phone {
   text-decoration: none;

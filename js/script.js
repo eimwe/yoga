@@ -1,20 +1,35 @@
 /*Contents:
-1.Box-shadow on scroll to header
-2.List items toggle in '.member-cards' section
-3.Slider in '.coaches' section
-  3.1 Checks if number of slides is even and initializes slider counter
-  3.2 Code for moving slideshow forward including incrementor for slider counter
-  3.3 Code for moving slideshow backward including reductor for slider counter
-  3.4 Event listener for slider buttons
-4.Slider in '.feedback' section
-  4.1 Slider counter initializer
+1.Header menu show/close switch
+2.Box-shadow on scroll to header
+3.List items toggle in '.member-cards' section
+4.Slider in '.coaches' section
+  4.1 Checks if number of slides is even and initializes slider counter
   4.2 Code for moving slideshow forward including incrementor for slider counter
   4.3 Code for moving slideshow backward including reductor for slider counter
   4.4 Event listener for slider buttons
+5.Slider in '.feedback' section
+  5.1 Slider counter initializer
+  5.2 Code for moving slideshow forward including incrementor for slider counter
+  5.3 Code for moving slideshow backward including reductor for slider counter
+  5.4 Event listener for slider buttons
 */
 window.document.addEventListener('DOMContentLoaded', function() {
 
-/*1.Box-shadow on scroll to header*/
+/*1.Header menu show/close switch*/
+  (function(){
+    let menuButtonNode = document.getElementById('menu-toggle'),
+        menuModalNode = document.getElementsByClassName('header-menu')[0];
+    menuButtonNode.addEventListener('change', function(){
+      if(menuButtonNode.checked) {
+        menuModalNode.classList.add('menu-opened');
+      } else {
+        menuModalNode.classList.remove('menu-opened');
+      }
+    });
+  })();
+
+
+/*2.Box-shadow on scroll to header*/
   window.addEventListener('scroll', function(){
     let headerNode = window.document.getElementsByTagName('HEADER')[0];
     if(window.pageYOffset > 0) {
@@ -25,7 +40,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-/*2.List items toggle in '.member-cards' section*/
+/*3.List items toggle in '.member-cards' section*/
   (function(){
     let liNodes = document.querySelectorAll('.member-cards-toggle li'),
         activeLiNode = document.getElementsByClassName('toggle-active');
@@ -38,7 +53,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
   })();
 
 
-/*3.Slider in '.coaches' section*/
+/*4.Slider in '.coaches' section*/
   let buttonNodes = document.querySelectorAll('.coaches-slider-controls button'),
       sliderCounterNode = document.querySelector('.coaches-slider-controls .slider-counter'),
       currentSlideIndexNode = document.querySelector('.coaches-slider-controls .current-slide'),
@@ -49,7 +64,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
       currentCounterIndex = document.createTextNode(defaultSlide),
       remainingIndex = document.createTextNode(descSlides.length);
 
-  //3.1 Checks if number of slides is even and initializes slider counter
+  //4.1 Checks if number of slides is even and initializes slider counter
   if(descSlides.length === bioSlides.length) {
     currentSlideIndexNode.appendChild(currentCounterIndex);
     nextSlideIndexNode.appendChild(remainingIndex);
@@ -61,7 +76,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
     console.error("There are more '.coaches-bio' elements than '.coaches-desc'!");
   }
 
-  //3.2 Code for moving slideshow forward including incrementor for slider counter
+  //4.2 Code for moving slideshow forward including incrementor for slider counter
   function showNextSlide(index) {
     let currentDescSlide = document.querySelector('.coaches-slide .slide-active'),
         currentBioSlide = document.querySelector('.coaches-bio-slide .slide-active');
@@ -94,7 +109,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  //3.3 Code for moving slideshow backward including reductor for slider counter
+  //4.3 Code for moving slideshow backward including reductor for slider counter
   function showPrevSlide(index) {
     let currentDescSlide = document.querySelector('.coaches-slide .slide-active'),
         currentBioSlide = document.querySelector('.coaches-bio-slide .slide-active');
@@ -127,7 +142,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  //3.4 Event listener for slider buttons
+  //4.4 Event listener for slider buttons
   for(let cnt = 0; cnt < buttonNodes.length; cnt++) {
     buttonNodes[cnt].addEventListener('click', function(){
       if(buttonNodes[cnt].classList.contains('next-slide')) {
@@ -139,7 +154,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-/*4.Slider in '.feedback' section*/
+/*5.Slider in '.feedback' section*/
   let slides = document.querySelectorAll('.feedback-slide'),
       slideCount = slides.length,
       feedbackSliderButtons = document.querySelectorAll('.feedback-slider-controls button'),
@@ -150,14 +165,14 @@ window.document.addEventListener('DOMContentLoaded', function() {
       currentSlide = document.querySelector('.feedback-slider-controls .current-slide'),
       nextSlide = document.querySelector('.feedback-slider-controls .remaining-slide');
 
-  //4.1 Slider counter initializer
+  //5.1 Slider counter initializer
   currentSlide.appendChild(initialSlideIndex);
   nextSlide.appendChild(lastSlideIndex);
   for(let itr = 0; itr < slides.length; itr++) {
     slides[itr].setAttribute('style', 'order: ' + itr + ';');
   }
 
-  //4.2 Code for moving slideshow forward including incrementor for slider counter
+  //5.2 Code for moving slideshow forward including incrementor for slider counter
   function showNextFeedback(index) {
     if(!(initialSlideIndex.nodeValue === lastSlideIndex.nodeValue)) {
       initialSlideIndex.nodeValue = '';
@@ -181,7 +196,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
     slides[count].setAttribute('style', 'order: 0;');
   }
   
-  //4.3 Code for moving slideshow backward including reductor for slider counter
+  //5.3 Code for moving slideshow backward including reductor for slider counter
   function showPrevFeedback(index) {
     if(initialSlideIndex.nodeValue > 1) {
       initialSlideIndex.nodeValue = '';
@@ -205,7 +220,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
     slides[count].setAttribute('style', 'order: 0;');
   }
 
-  //4.4 Event listener for slider buttons
+  //5.4 Event listener for slider buttons
   for(let cnt = 0; cnt < feedbackSliderButtons.length; cnt++) {
     feedbackSliderButtons[cnt].addEventListener('click', function(){
       if(feedbackSliderButtons[cnt].classList.contains('next-slide')) {
