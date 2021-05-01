@@ -40,19 +40,21 @@ body {
   background-color: #fcf8fe;
   background-image: url(../img/assets/member-card-bg.png);
   background-repeat: no-repeat;
-  background-position: 50% 2025px;
-  background-size: 100%;
+  background-position: 50% 52%;
+  background-size: contain;
 }
 
 header {
   position: fixed;
   top: 0;
   z-index: 1;
+  box-sizing: border-box;
   width: 100vw;
+  height: 40px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
 }
 
 .header-fixed {
@@ -64,12 +66,17 @@ header {
   display: none;
 }
 
+.menu-title {
+  visibility: hidden;
+  position: absolute;
+  top: -5px;
+}
+
 .menu-button label {
   position: relative;
   display: block;
   width: 30px;
   height: 1px;
-  margin-left: 15px;
   background-color: #8e80a9;
   cursor: pointer;
 }
@@ -119,9 +126,9 @@ header {
 .header-menu {
   position: absolute;
   top: 30px;
-  left: 0;
-  width: 50vw;
-  height: 50vh;
+  left: -285px;
+  width: 160px;
+  height: 285px;
   border: 1px solid #8e80a9;
   background-color: #fff;
   box-shadow: 0 4px 25px rgba(142, 128, 169, .2);
@@ -153,7 +160,6 @@ header {
 .phone {
   text-decoration: none;
   color: inherit;
-  margin-right: 15px;
 }
 
 .banner {
@@ -162,7 +168,7 @@ header {
   justify-content: center;
   height: 335px;
   text-align: center;
-  background: url(../img/assets/banner-bg.png) no-repeat -105px 0;
+  background: url(../img/assets/banner-bg.png) no-repeat 50% 0;
   background-size: cover;
 }
 
@@ -211,7 +217,7 @@ header {
 
 .banner-bottom-wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   order: 4;
   visibility: hidden;
 }
@@ -351,8 +357,8 @@ header {
   flex-direction: column;
   margin-top: 70px;
   text-align: center;
-  background: url(../img/assets/member-card-clouds.png) no-repeat -520px 90px;
-  background-size: 400%;
+  background: url(../img/assets/member-card-clouds.png) no-repeat 55% 70px;
+  background-size: cover;
 }
 
 .member-cards h2 {
@@ -883,4 +889,467 @@ footer {
 
 .footer-copyright a {
   margin-top: 25px;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-position: 93% 39%;
+    background-size: 40%;
+  }
+  
+  header {
+    padding: 35px 75px;
+  }
+
+  .menu-button label,
+  .menu-button label::before {
+    width: 13px;
+  }
+
+  .menu-button label::before {
+    bottom: 3px;
+  }
+
+  .menu-button label::after {
+    top: 3px;
+    width: 8px;
+  }
+
+  #menu-toggle:checked ~ label::before,
+  #menu-toggle:checked ~ label::after {
+    width: 9px;
+  }
+
+  .menu-title {
+    visibility: visible;
+    top: -7px;
+    left: 20px;
+  }
+
+  .header-menu {
+    top: 45px;
+  }
+
+  .menu-opened {
+    left: 90px;
+  }
+
+  .banner {
+    height: 484px;
+  }
+
+  .banner h1 {
+    flex-basis: 20%;
+    margin: 0;
+    font-size: 144px;
+    letter-spacing: 45px;
+    text-indent: 45px;
+  }
+
+  .banner p {
+    flex-basis: 15%;
+    font-size: 24px;
+  }
+
+  .banner-bottom-wrapper {
+    padding: 0 75px;
+    margin-top: 60px;
+    visibility: visible;
+  }
+
+  .clubs {
+    background: url(../img/assets/clubs-bg.png) no-repeat 0 40%;
+    background-size: cover;
+  }
+
+  .clubs::before {
+    display: none;
+  }
+
+  .clubs h2 {
+    font-size: 21px;
+  }
+
+  .clubs-loader {
+    display: block;
+  }
+
+  .clubs-wrapper {
+    display: grid;
+    width: 623px;
+    height: 332px;
+    grid-template-columns: 245px 350px;
+    grid-template-rows: 120px 120px 1px 30px;
+    gap: 20px 25px;
+  }
+
+  .clubs-wrapper .club:first-child {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+  }
+
+  .clubs-wrapper .club:not(:first-child) {
+    grid-column: 2 / 3;
+  }
+
+  .clubs-wrapper .club:nth-child(2) {
+    grid-row: 1 / 2;
+  }
+
+  .clubs-wrapper .club:nth-child(3) {
+    grid-row: 2 / 3;
+  }
+
+  .clubs-wrapper .clubs-loader {
+    grid-row: 4 / 5;
+  }
+
+  .club {
+    box-sizing: border-box;
+    margin-bottom: 0;
+  }
+
+  .clubs-wrapper .club:not(:first-child) {
+    flex-direction: row;
+  }
+
+  .clubs-wrapper .club:first-child {
+    width: 245px;
+    height: 332px;
+  }
+
+  .clubs-image-wrapper {
+    width: 150px;
+    height: 120px;
+  }
+
+  .clubs-image-wrapper img {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .clubs-wrapper .club:first-child .clubs-image-wrapper {
+    width: 245px;
+    height: 210px;
+  }
+
+  .club-desc-wrapper {
+    width: 205px;
+    height: 120px;
+  }
+
+  .clubs-wrapper .club:first-child .club-desc-wrapper {
+    width: 245px;
+    height: 122px;
+  }
+
+  .clubs-wrapper .club:not(:first-child) .club-desc {
+    width: auto;
+    padding: 20px 0 20px 20px;
+  }
+
+  .clubs-wrapper .club:first-child .club-desc {
+    width: auto;
+    padding: 20px 30px 20px 20px;
+  }
+
+  .clubs-wrapper .club:not(:first-child) .club-desc-wrapper .go-to-btn {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin-top: auto;
+    transform: translate(-25px, -25px);
+  }
+
+  .clubs-wrapper .club:not(:first-child) .club-desc-wrapper .go-to-btn svg {
+    position: absolute;
+    top: 5px;
+    right: 11px
+  }
+
+  .clubs-wrapper .club:first-child .club-desc-wrapper .go-to-btn svg {
+    vertical-align: middle;
+  }
+  
+  .member-cards {
+    min-height: 430px;
+    justify-content: center;
+    background-position: 0 50px;
+  }
+
+  .member-cards h2 {
+    font-size: 21px;
+  }
+
+  .member-cards-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    min-height: 220px;
+    margin: 0;
+  }
+
+  .member-card {
+    width: 105px;
+    height: 80px;
+    margin-bottom: 0;
+    padding: 40px 35px;
+    transition: width 300ms, height 300ms;
+  }
+
+  .member-card button {
+    visibility: hidden;
+  }
+
+  .member-card:hover {
+    width: 150px;
+    height: 140px;
+  }
+
+  .member-card:hover button {
+    visibility: visible;
+  }
+
+  .member-card.default {
+    width: 150px;
+    height: 140px;
+  }
+
+  .member-card.default button {
+    visibility: visible;
+  }
+
+  .member-card + .member-card {
+    margin-left: 25px;
+  }
+
+  .member-card-name {
+    font-size: 18px;
+  }
+
+  .member-card-price {
+    font-size: 21px;
+  }
+
+  .coaches {
+    min-height: 515px;
+    background-position: -35% 0;
+    background-size: 70%;
+  }
+
+  .coaches h2 {
+    font-size: 21px;
+  }
+
+  .coaches-slider {
+    width: 620px;
+    height: 370px;
+    display: flex;
+  }
+
+  .coaches-slider-controls button {
+    width: 30px;
+    height: 20px;
+  }
+
+  .coaches-slider-controls .prev-slide,
+  .coaches-slider-controls .next-slide,
+  .coaches-slider-controls .slider-counter {
+    position: static;
+  }
+
+  .coaches-slider-controls .slider-counter {
+    display: block;
+    margin: 0 7px;
+    padding-top: 2px;
+  }
+
+  .coaches-slider-controls {
+    position: absolute;
+    bottom: 0;
+    left: 27%;
+    display: flex;
+  }
+
+  .coaches-slide {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .coaches-desc {
+    position: static;
+    width: 255px;
+    height: 67px;
+    justify-content: flex-start;
+  }
+
+  .coaches-desc:first-child {
+    margin-top: 28px;
+  }
+
+  .coaches-desc + .coaches-desc {
+    margin-top: 45px;
+  }
+
+  .coaches-image-wrapper {
+    width: 91px;
+    height: 92px;
+    transform: translate(-15px, -25px);
+  }
+
+  .coaches-image-wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .coaches-info {
+    margin-left: -8px;
+  }
+
+  .coaches-bio-loader {
+    display: block;
+  }
+
+  .coaches-desc .social-buttons-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    width: 47px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  .coaches-desc .social-button,
+  .coaches-desc .social-buttons-wrapper li:nth-child(2) .social-button {
+    width: 8px;
+    height: 7px;
+    padding-right: 10px;
+    margin-top: -15px;
+  }
+
+  .coaches-desc .social-buttons-wrapper li:nth-child(2) .social-button {
+    width: 9px;
+    height: 8px;
+  }
+
+  .coaches-slide .slide-inactive {
+    visibility: visible;
+    opacity: .5;
+  }
+
+  .coaches-bio {
+    top: 0;
+    left: 40px;
+    width: 310px;
+  }
+
+  .coaches-bio .coaches-name {
+    display: block;
+  }
+
+  .feedback h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+
+  .feedback-slider-wrapper {
+    flex-direction: column;
+    padding-top: 20px;
+    height: 683px;
+    overflow: hidden;
+  }
+
+  .feedback-slider-controls {
+    margin-top: 25px;
+  }
+
+  .feedback-slide {
+    min-height: 315px;
+    padding: 30px 57px 30px 87px;
+    margin: 0 160px 35px 170px;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .subscription-form {
+    min-height: 475px;
+    margin-top: 145px;
+    padding-right: 180px;
+    padding-left: 180px;
+    background-position: 11% 0;
+  }
+
+  .subscription-form h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .subscription-form input[type = "text"] {
+    margin-top: 30px;
+  }
+
+  .subscription-form input[type = "tel"] {
+    margin-top: 20px;
+  }
+
+  .subscription-form input[type = "submit"] {
+    margin-top: 50px;
+  }
+
+  footer {
+    padding: 75px;
+  }
+
+  .footer-contacts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 335px;
+  }
+
+  .footer-contacts-wrapper p:first-child {
+    order: 0;
+  }
+
+  .footer-contacts-wrapper p:nth-child(2) {
+    order: 3;
+  }
+
+  .footer-contacts-wrapper p:nth-child(3) {
+    flex-basis: calc(37% - 1px);
+    order: 2;
+  }
+
+  .footer-contacts-wrapper p:nth-child(4) {
+    order: 4;
+  }
+
+  .footer-contacts-wrapper .social-wrapper {
+    justify-content: flex-start;
+    order: 5;
+  }
+
+  .social-wrapper .social,
+  .social-wrapper .social svg {
+    width: 15px;
+    height: 10px;
+  }
+
+  .social-wrapper .social {
+    margin-right: 10px;
+  }
+
+  .footer-copyright {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 290px;
+    margin-top: 0;
+  }
+
 }
