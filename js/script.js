@@ -185,15 +185,18 @@ window.document.addEventListener('DOMContentLoaded', function() {
       currentSlide.appendChild(initialSlideIndex);
     }
 
-    slides[count].setAttribute('style', 'order: ' + (count + slideCount) + ';');
+    slides[count].setAttribute('style', 'order: ' + (slideCount + count) + ';');
 
     if(count < slideCount - 1) {
       count++;
     } else {
       count = 0;
+      for(let itr = 0; itr < slides.length; itr++) {
+        slides[itr].setAttribute('style', 'order: ' + itr + ';');
+      }
     }
 
-    slides[count].setAttribute('style', 'order: 0;');
+    slides[count].setAttribute('style', 'order: ' + (count - index) + ';');
   }
   
   //5.3 Code for moving slideshow backward including reductor for slider counter
@@ -215,9 +218,13 @@ window.document.addEventListener('DOMContentLoaded', function() {
       count--;
     } else {
       count = slideCount - 1;
+      for(let cnt = 0; cnt < slides.length; cnt++) {
+        slides[cnt].setAttribute('style', 'order: ' + (cnt + slideCount) + ';');
+      }
+      
     }
   
-    slides[count].setAttribute('style', 'order: 0;');
+    slides[count].setAttribute('style', 'order: ' + (index - count) + ';');
   }
 
   //5.4 Event listener for slider buttons
