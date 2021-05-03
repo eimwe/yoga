@@ -168,9 +168,6 @@ window.document.addEventListener('DOMContentLoaded', function() {
   //5.1 Slider counter initializer
   currentSlide.appendChild(initialSlideIndex);
   nextSlide.appendChild(lastSlideIndex);
-  for(let itr = 0; itr < slides.length; itr++) {
-    slides[itr].setAttribute('style', 'order: ' + itr + ';');
-  }
 
   //5.2 Code for moving slideshow forward including incrementor for slider counter
   function showNextFeedback(index) {
@@ -196,7 +193,7 @@ window.document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    slides[count].setAttribute('style', 'order: ' + (count - index) + ';');
+    slides[count].setAttribute('style', 'order: -' + index + ';');
   }
   
   //5.3 Code for moving slideshow backward including reductor for slider counter
@@ -206,13 +203,13 @@ window.document.addEventListener('DOMContentLoaded', function() {
       initialSlideIndex = document.createTextNode(initialSlide -= index);
       currentSlide.appendChild(initialSlideIndex);
     } else {
-      initialSlide = remainingIndex.nodeValue;
+      initialSlide = lastSlideIndex.nodeValue;
       initialSlideIndex.nodeValue = '';
       initialSlideIndex.nodeValue = initialSlide;
       currentSlide.appendChild(initialSlideIndex);
     }
 
-    slides[count].setAttribute('style', 'order: ' + (slideCount - count) + ';');
+    slides[count].removeAttribute('style');
   
     if(count > 0) {
       count--;
@@ -221,10 +218,9 @@ window.document.addEventListener('DOMContentLoaded', function() {
       for(let cnt = 0; cnt < slides.length; cnt++) {
         slides[cnt].setAttribute('style', 'order: ' + (cnt + slideCount) + ';');
       }
-      
     }
   
-    slides[count].setAttribute('style', 'order: ' + (index - count) + ';');
+    slides[count].setAttribute('style', 'order: -' + index + ';');
   }
 
   //5.4 Event listener for slider buttons
