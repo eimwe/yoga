@@ -1,6 +1,6 @@
 /*Contents:
 1.Header menu show/close switch
-2.Box-shadow on scroll to header
+2.Box-shadow on scroll header for device width up to 600px
 3.List items toggle in '.member-cards' section
 4.Slider in '.coaches' section
   4.1 Checks if number of slides is even and initializes slider counter
@@ -29,13 +29,18 @@ window.document.addEventListener('DOMContentLoaded', function() {
   })();
 
 
-/*2.Box-shadow on scroll to header*/
+/*2.Box-shadow on scroll to header for device width up to 600px*/
   window.addEventListener('scroll', function(){
+    const mediaQueryList = window.matchMedia("(min-width: 600px)");
     let headerNode = window.document.getElementsByTagName('HEADER')[0];
-    if(window.pageYOffset > 0) {
-      headerNode.classList.add('header-fixed');
+    if (mediaQueryList.matches) {
+      return false;
     } else {
-      headerNode.classList.remove('header-fixed');
+      if(window.pageYOffset > 0) {
+        headerNode.classList.add('header-fixed');
+      } else {
+        headerNode.classList.remove('header-fixed');
+      }
     }
   });
 
