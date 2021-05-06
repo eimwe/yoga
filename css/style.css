@@ -1873,3 +1873,31 @@ footer {
     margin-top: 0;
   }
 }
+
+@media only screen and (max-width: 1366px) {
+  .feedback-slider-controls .prev-slide {
+    left: 15%;
+  }
+
+  .feedback-slider-controls .next-slide {
+    right: 15%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .banner {
+    min-height: 1200px;
+  }
+  
+  .member-cards {
+    min-height: 950px;
+  }
+
+  .feedback-slider-controls .prev-slide {
+    left: 25%;
+  }
+
+  .feedback-slider-controls .next-slide {
+    right: 25%;
+  }
+}
